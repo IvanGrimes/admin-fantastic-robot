@@ -1,0 +1,53 @@
+{
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-typescript",
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "@babel/proposal-class-properties",
+    "@babel/proposal-object-rest-spread",
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "corejs": 3,
+        "proposal": true
+      }
+    ],
+    "babel-plugin-styled-components",
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "@modules": "./src/modules",
+          "@features": "./src/features",
+          "@components": "./src/components",
+          "@hooks": "./src/hooks",
+          "@lib": "./src/lib",
+          "@utils": "./src/utils",
+          "@model": "./src/model",
+          "@theme": "./src/theme",
+          "@HOC": "./src/HOC"
+        }
+      }
+    ]
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        [
+          "babel-plugin-styled-components",
+          {
+            "ssr": false,
+            "minify": true,
+            "displayName": false,
+            "fileName": false,
+            "pure": true
+          }
+        ],
+        "babel-plugin-polished"
+      ]
+    }
+  }
+}
