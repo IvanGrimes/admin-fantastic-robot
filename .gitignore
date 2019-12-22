@@ -95,6 +95,4 @@ out
 # sentry settings
 .sentryclirc
 
-public/
-
 src/**/*.js
