@@ -19,7 +19,7 @@
     "cross-env": "^6.0.3",
     "dequal": "^1.0.0",
     "dotenv-webpack": "^1.7.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "now": "^16.7.0",
     "polished": "^3.4.2",
     "qs": "^6.9.1",
